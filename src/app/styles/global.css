@@ -86,8 +86,11 @@ button {
 }
 
 .trip-map__canvas .leaflet-control-attribution {
-  font-size: 11px;
-  background: rgba(255, 255, 255, 0.82);
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 1.2;
+  opacity: 0.72;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .leaflet-trip-popup {

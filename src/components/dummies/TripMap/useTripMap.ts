@@ -186,6 +186,8 @@ export function useTripMap(params: UseTripMapParams): {
       attributionControl: true,
     });
 
+    map.attributionControl.setPrefix(false);
+
     L.tileLayer(MAP_TILE_URL, {
       attribution: MAP_TILE_ATTRIBUTION,
       maxZoom: MAP_MAX_ZOOM,
