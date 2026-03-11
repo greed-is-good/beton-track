@@ -1,0 +1,172 @@
+@import 'leaflet/dist/leaflet.css';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.brand-mark {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1457ff, #4f82ff);
+}
+
+.brand-mark::before,
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 999px;
+}
+
+.brand-mark::before {
+  width: 8px;
+  height: 22px;
+  left: 10px;
+  top: 10px;
+}
+
+.brand-mark::after {
+  width: 18px;
+  height: 8px;
+  left: 14px;
+  top: 17px;
+}
+
+.compact-panel,
+.stat-panel,
+.subtile {
+  padding: 14px 16px;
+  border: 1px solid rgba(26, 43, 73, 0.08);
+  border-radius: 14px;
+  background: #f8faff;
+}
+
+.compact-panel--soft,
+.stat-panel--focus {
+  background: rgba(20, 87, 255, 0.05);
+}
+
+.trip-map__canvas {
+  position: relative;
+  min-height: 320px;
+  margin-top: 16px;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(26, 43, 73, 0.08);
+  background: #eef3fb;
+}
+
+.trip-map__canvas--loading {
+  display: flex;
+  align-items: stretch;
+}
+
+.trip-map__canvas .leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.trip-map__canvas .leaflet-control-attribution {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.leaflet-trip-popup {
+  display: grid;
+  gap: 4px;
+}
+
+.leaflet-trip-popup strong,
+.leaflet-trip-popup span {
+  display: block;
+}
+
+.leaflet-trip-popup span {
+  color: #677487;
+  font-size: 12px;
+}
+
+.leaflet-trip-marker {
+  background: transparent;
+  border: 0;
+}
+
+.leaflet-trip-marker__dot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 18px rgba(24, 33, 47, 0.18);
+}
+
+.leaflet-trip-marker--plant .leaflet-trip-marker__dot {
+  background: #1457ff;
+}
+
+.leaflet-trip-marker--site .leaflet-trip-marker__dot {
+  background: #c5792e;
+}
+
+.leaflet-trip-marker__truck-shell {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.leaflet-trip-marker__truck-pulse {
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: rgba(20, 87, 255, 0.16);
+}
+
+.leaflet-trip-marker__truck-core {
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background: #18212f;
+  box-shadow: 0 8px 18px rgba(24, 33, 47, 0.18);
+}
+
+.leaflet-trip-marker__truck-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  fill: #1457ff;
+  filter: drop-shadow(0 4px 10px rgba(20, 87, 255, 0.28));
+  transform-origin: 50% 50%;
+}
+
+@media (max-width: 720px) {
+  .trip-map__canvas {
+    min-height: 260px;
+  }
+
+  .trip-map__canvas .leaflet-container {
+    min-height: 260px;
+  }
+}
